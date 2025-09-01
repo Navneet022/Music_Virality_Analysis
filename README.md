@@ -1,33 +1,34 @@
 # Music_Virality_Analysis
 
-Few days back i was listening to music and while looking for a good song browsing spotify a thought came into my mind,. How are thes songs rated who and what decides this song is a hit. I mean what makes a hit song? Is there a pattern in there or am not?
+Few days back I was listening to music and while looking for a good song browsing spotify a thought came into my mind. How are these songs rated? I mean, what makes a hit song? Is there a pattern in there, or not?
 
 Dataset :
-For the analysis I needed a dataset so I went searching after looking at many dataset that did not full fil my curiosity or weren't comprehensive to solve the answers I was looking for ,I fianlly founf a spotify data set. It has approx 21K records and most of it is that it contains the audio features I was looking for. So i got to work.
+For the analysis, I needed a dataset, so I went searching after looking at many dataset that did not full fil my curiosity or weren't comprehensive to solve the answers I was looking for , I fianlly founf a Spotify data set. It has approximately 21K records, and most of it is that it contains the audio features I was looking for. So I got to work.
 
 Hypothesis:
-After looking at the data I have few question or hypothesis I want to clarify:
-- These are the factors that I want to evaluate and see whether they have any corelation with a song being a hit or not:
+After looking at the data, I have a few questions or hypotheses I want to clarify:
+- These are the factors that I want to evaluate and see whether they have any correlation with a song being a hit or not:
+  
   a. Having a license?
   b. Duration of the song?
   c. Streaming services?
-  d. Does having a video or not have an affect?
-  e. Does any specific audio feature like dancebility, energy, liveness, tempo etc have an effect?
+  d. Does having a video or not have an effect?
+  e. Does any specific audio feature like danceability, energy, liveness, tempo, etc have an effect?
 
-What do i mean by a hit song?
-Just saying "hit song" is too vague, so let's give a definition to it. Either A song which is among top 20% of the engagement ratio or among top 20% of streams is considered a hit song for this analysis. Similarly the botton 20% of either of these is considered a flop.
+What do I mean by a hit song?
+Just saying "hit song" is too vague, so let's give a definition to it. Either A song that is among the top 20% of the engagement ratio or among the top 20% of streams is considered a hit song for this analysis. Similarly, the bottom 20% of either of these is considered a flop.
 
 Analysis steps:
 
-1. EDA : I performed exploratory data analaysis and foudn out how many nulls where there along with will they affect the analysis or not. I found that none of the missing values or nulls affect the analysis and choose not to remove them as it is still early and i don't want to get stuck later on , if they hinder i can remove them later.
+1. EDA: I performed exploratory data analysis and found out how many nulls there were along whether they would affect the analysis or not. I found that none of the missing values or nulls affect the analysis and choose not to remove them as it is still early and i don't want to get stuck later on, if they hinder, i can remove them later.
 - Few Findings :
-  a. The streams which have nulls r zero values are all played on Youtube (likely due to wrong data collection or soemthing else will have to look deeper to undertsand this)
-  b. Some songs even though they have a video still have 0 views, like or comments and same is for the songs without any videos. This proves that video has no correlation to "hit " factor.
-  c. Songs which have licence definetly have video but vice-versa is not true.
+  a. The streams that have nulls or zero values are all played on YouTube (likely due to wrong data collection or something else, will have to look deeper to understand this)
+  b. Some songs, even though they have a video, still have 0 views, likes, or comments, and the same is for the songs without any videos. 
+  c. Songs which have a licence definitely have video, but vice versa is not true.
 
 2. SQL :(Analysis and Customer segementation)
-   a. Calculated the engagement ratio then found the top and bottom 20% of the enagagement ratio and streams.
-   b. Then went to segment the data into four categories :-
+   a. Calculated the engagement ratio, then found the top and bottom 20% of the engagement ratio and streams.
+   b. Then went to segment the data into four categories:-
 
     i) WHEN stream_percentile <= 0.2 AND engagement_percentile <= 0.2 THEN 'Hit'
       ->Top 20% streams (popular songs by listens).
@@ -66,8 +67,9 @@ Analysis steps:
     i) Short:- Duration <3 mins
    ii) Medium: Duration between 3-5 mins
   iii) Long: Duration >5mins
+  h. Correlation between engagement and stream
 
-3. Python Analysis:
+4. Python Analysis:
    a. Feature correlation with streams
    <img width="1004" height="594" alt="image" src="https://github.com/user-attachments/assets/643ca283-3ee2-414b-9a94-238627133af6" />
 
