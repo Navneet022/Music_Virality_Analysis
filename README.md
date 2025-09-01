@@ -70,10 +70,10 @@ Analysis steps:
   h. Correlation between engagement and stream
 
 4. Python Analysis:
-   a. Feature correlation with streams
+   a. Feature correlation with engagement_ratio
    <img width="1004" height="594" alt="image" src="https://github.com/user-attachments/assets/643ca283-3ee2-414b-9a94-238627133af6" />
 
-   b. Feature correlation with engagement_ratio
+   b. Feature correlation with stream
    <img width="1010" height="602" alt="image" src="https://github.com/user-attachments/assets/85d1b862-faff-432b-9027-0ba14b99ef18" />
 
        
