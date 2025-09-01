@@ -53,4 +53,25 @@ Analysis steps:
      -> Everything else that doesn’t fit the extremes.
         Just average or in-between songs.
 
-   
+   c. Aggregate Summary:
+    i) Total stream per song/ artist
+    ii) Avg stream per song/artist
+
+   d. Ranking top N:
+     i) Top 10 songs
+     ii) Top 10 artist
+
+   e. License, video, and Platform affect
+   g. Duration bucket:
+    i) Short:- Duration <3 mins
+   ii) Medium: Duration between 3-5 mins
+  iii) Long: Duration >5mins
+
+3. Python Analysis:
+   a. Feature correlation with streams
+   <img width="1004" height="594" alt="image" src="https://github.com/user-attachments/assets/643ca283-3ee2-414b-9a94-238627133af6" />
+
+   b. Feature correlation with engagement_ratio
+   <img width="1010" height="602" alt="image" src="https://github.com/user-attachments/assets/85d1b862-faff-432b-9027-0ba14b99ef18" />
+
+       
